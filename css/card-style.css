@@ -1,0 +1,35 @@
+.card{
+    background-color: aqua;
+    height: 490px;
+    width: 340px;
+    background-size: cover;
+    position: relative;
+}
+.card-body{
+    
+}
+
+.card-title{
+    position: absolute;
+    top:0;
+    color:white;
+}
+
+.card-subtitle{
+    position: absolute;
+    bottom:0;
+    color:red;
+    
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav img{
+    width:125px;
+}
+
+nav{
+    display: flex;
+}
