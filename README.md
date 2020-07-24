@@ -1,11 +1,14 @@
 # arrowverse-character-guide
 
 ## to do
-* [] create database
-** [] create a table for character by name
-** [] create a table for team
-* [] connect to db
-* [] get data from db
-* [] put data into html template
-* [] filter data for show
-* [] create search feature
+* [x] create database
+* [x] create a table for character by name
+* [ ] create a table for powers/abilities
+* [x] connect to db
+* [x] get data from db
+* [x] put data into html template
+* [x] filter data for show
+* [ ] create search feature
+* [ ] show full catalog
+* [ ] sort by good or evil
+* [ ] style

@@ -33,5 +33,8 @@ include("inc/header.php"); ?>
                 foreach ($catalog as $item) {
                     echo get_item_html($item);
                 }
-                ?>
+?>
 </div>
+<?php
+include("inc/footer.php");
+?>

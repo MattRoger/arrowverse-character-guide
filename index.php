@@ -1,6 +1,6 @@
 <?php
 include("inc/functions.php");
-$catalog=full_catalog_array();
+$catalog=get_random_array();
 include("inc/header.php");
 
 ?>
@@ -12,6 +12,9 @@ include("inc/header.php");
   
   ?>
 </div>
+<?php
+include("inc/footer.php");
 
+?>
 </body>
 </html>
