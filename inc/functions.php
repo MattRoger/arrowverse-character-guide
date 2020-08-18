@@ -1,5 +1,20 @@
 <?php
-function get_backside($main_id){
+function get_skills($main_id){
+    include("connection.php");
+    $query='SELECT  skills.skill_type, skills.skill_name FROM hero_skills JOIN skills ON hero_skills.skill_id = skills.skill_id WHERE ' . $main_id. '=hero_id';
+    try{ 
+        $results= $db->query($query);
+       
+     }catch(Exception $e){
+         echo "error";
+         exit;
+     }
+    $catalog_skills = $results->fetchAll();
+    return $catalog_skills;
+}
+
+
+function get_aka($main_id){
     include("connection.php");
     $query='SELECT  aka FROM AKA WHERE ' . $main_id. '=main_id';
     try{ 
@@ -11,13 +26,10 @@ function get_backside($main_id){
      }
     $catalog_aka = $results->fetchAll();
     $aka_array= array();
-    foreach($catalog_aka as $item){
-     
+    foreach($catalog_aka as $item){     
           array_push( $aka_array, $item['aka']);
-    
     }
     return $aka_array;
-    // return $catalog_aka;
 }
 
 function full_catalog_array(){
@@ -69,9 +81,18 @@ function category_catalog_array($show){
 }
 
 function get_item_html($item){  
-    $aka=get_backside($item['main_id']);
-    var_dump($aka[0]);
-    var_dump($aka[1]);
+    $aka=get_aka($item['main_id']);
+    $skills=get_skills($item['main_id']);
+    $abilities= array();
+    $powers= array();
+    for($i=0; $i<count($skills); $i++){    
+        $skill= $skills[$i]['skill_name'];
+        if($skills[$i]['skill_type']=='power'){
+            array_push($powers, $skill);           
+        }else{        
+            array_push($abilities,$skill);    
+        }
+    }
 
     $class = strtolower($item["first_name"].$item["last_name"]);
     $full_name=$item['first_name'] . " " . $item["last_name"] ; 
@@ -83,27 +104,39 @@ function get_item_html($item){
         <h4 style="background-color:'.$item['bg_color'].'">'. $full_name .'</h4>
       </div>
       <div class="flip-card-back" style="background-color:'.$item['bg_color'].'">
-        <h3>Name:' . $full_name .'</h3>
-        <h4>Alias:' . $item['main_alias'] .'</h4><p>AKA: ';
-        for($i=0; $i< count($aka); $i++){
-            if($i<count($aka)-1){
-                $output .=  $aka[$i] .", ";
-                
-            }else{
-                $output .=  $aka[$i] .".";
-
-            }
+        <h3>Name: ' . $full_name .'</h3>
+        <h4>Alias: ' . $item['main_alias'] .'</h4>
+        <p>Species: ' . $item['species'] .'</p>';
+        // creates alias list
+        if(count($aka)>1){
+            $output .='<p>AKA: ';
+            for($i=0; $i< count($aka); $i++){
+                if($i<count($aka)-1){
+                    $output .=  $aka[$i] .", ";
+                    
+                }else{
+                    $output .=  $aka[$i] .".";
+                }
+            }   
+            $output .=   '</p>';
         }
+        // powers
         
-      
-        $output .=   '</p>';
-
-    //     foreach($aka as$akaItem){
-            
-    //       echo($akaItem);
-      
-    // }
-   
+        if(count($powers)>=1){
+            $output.='<p>Powers</p><ul>';
+            foreach($powers as $power){
+                $output.="<li>$power</li>";
+            }
+            $output.='</ul>';
+        }
+        if(count($abilities)>=1){
+            $output.='<p>Abilities</p><ul>';
+            foreach($abilities as $ability){
+                $output.="<li>$ability</li>";
+            }
+            $output.='</ul>';
+        }
+  
     $output .=       
         "</div>
         </div>

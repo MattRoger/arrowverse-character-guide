@@ -142,28 +142,175 @@ VALUES(3021, 302, "Chronos, Rebecca Silver");
 INSERT INTO AKA(AKA_id, main_id, aka)
 VALUES(3021, 302, "Rebecca Silver");
 
-DROP TABLE IF EXISTS AKA_Main;
-CREATE TABLE AKA_Main(  
-  AKA_id int NOT NULL,
-  main_id int NOT NULL
+
+-- powers/ablities
+
+DROP TABLE IF EXISTS skills;
+CREATE TABLE skills(  
+  skill_id int NOT NULL,
+  skill_type VARCHAR(50) NOT NULL,
+  skill_name VARCHAR(100) NOT NULL
 );
 
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(1011, 101);
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(1012, 101);
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(1011, 101);
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(1013, 101);
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(1014, 101);
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1001,"ability", "Master Marksman");
 
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(2011, 201);
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1002,"ability", "Master Archer");
 
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(3021, 302);
-INSERT INTO AKA_Main(AKA_id, main_id)
-VALUES(3022, 302);
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1003, "ability", "Master Swordsman");
 
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1004, "ability", "Peak of human physical condition");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1005, "ability", "Stealth Infiltration");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1006, "ability", "Master hand-to-hand combatant");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1007, "ability", "High-level intellect");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1008, "ability", "Crime Scene Investagator");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1009, "ability", "Expert medic");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1010, "ability", "Master computer hacker");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1011, "ability", "Master Engineer");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1012, "ability", "Master mathematicia");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1013, "ability", "Master thief");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1014, "ability", "Master Driver");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1015, "ability", "Master Assassin");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2001, "power", "Super Speed");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2002, "power", "Accelerated healing factor");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2003, "power", "Invisibility");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2004, "power", "Electrokinesis");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2005, "power", "Superhuman strength");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2006, "power", "Interdimensional travel");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2007, "power", "Interdimensional travel");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2008, "power", "Vibrational blasts");
+
+DROP TABLE IF EXISTS hero_skills;
+CREATE TABLE hero_skills(  
+  hero_id int NOT NULL, 
+  skill_id int NOT NULL
+);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1002);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1003);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1005);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1007);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1002);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1003);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1005);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(102, 1009);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 1008);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 2001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 2002);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 2003);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 2004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(201, 2005);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 1010);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 1011);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 2006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 2007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(202, 2008);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1003);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1005);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1013);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1014);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(301, 1015);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(302, 1013);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(302, 1006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(302, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(302, 1014);

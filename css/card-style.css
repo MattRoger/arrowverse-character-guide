@@ -45,7 +45,6 @@
 }
 
 
-
 .wrapper{
   width: 90%;
     display: flex;
@@ -60,24 +59,3 @@ nav{
     display: flex;
 }
 
-
-
-
-
-
-  
-
-
-
-
-.wrapper{
-    display: flex;
-    flex-wrap: wrap;
-}
-nav img{
-    width:125px;
-}
-
-nav{
-    display: flex;
-}
