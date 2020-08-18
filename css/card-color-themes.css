@@ -1,0 +1,166 @@
+
+/* ---Arrow---- */
+/* oliver 
+    Border:Dark Green
+    Glow: Neon Green
+    field: Green
+    Text: off white
+    
+    */
+.oliverqueen{
+    box-shadow: 0 4px 8px 0 #00bb1a;
+    border: .25em solid #030805;
+    color:#fffcd8;
+}    
+/* {
+    background-color:#124222;
+} */
+
+/* diggle */
+
+.johndiggle{
+    box-shadow: 0 4px 8px 0 #a22a60;
+    border: .25em solid #25181f;
+    color:#f0f0c9;
+}    
+
+/* --- the flash-- */
+/* barry 
+Border:Red
+Glow: Yellow
+field: Red 2
+Text: off white
+*/
+.barryallen{
+    box-shadow: 0 4px 8px 0 #fcff1d;
+    border: .25em solid #9a010b;
+    color:#f0f0c9;
+}    
+
+/* {
+    background-color:#9a010b;
+} */
+
+
+
+/* cisco 
+ Border:Dark purple
+    Glow: blue
+    field:blue
+    Text: off white*/
+
+.ciscoramon{
+        box-shadow: 0 4px 8px 0 #00eaff;
+        border: .25em solid #1f0352;
+        color:#f0dbc9;
+    }    
+    
+    /* {
+        background-color:#41076a;
+    } */
+    
+
+/* --- Legends of Tomorrow-- */
+/* sara 
+ Border:Light Purple
+    Glow: neon purple
+    field: light blue
+    Text: black
+*/
+.saralance{
+    box-shadow: 0 4px 8px 0 #da48ff;
+    border: .25em solid #390c48;
+    color:#1f1e14;
+}    
+
+/* {
+    background-color:#9d3bf8;
+} */
+
+/* mick 
+ Border:Red
+    Glow: Orange
+    field:orange/yellow
+    Text: black
+*/
+
+.mickrory{
+    box-shadow: 0 4px 8px 0 #ff7800;
+    border: .25em solid #e00000;
+    color:#1f1e14;
+}    
+
+/* {
+    background-color:#9d3bf8;
+} */
+
+/* --- Supergirl-- */
+
+/* kara 
+ Border:Blue
+    Glow: Gold
+    field: Red
+    Text: off white
+*/
+
+.karadanvers{
+    box-shadow: 0 4px 8px 0 #ffff47;
+    border: .25em solid #263d53;
+    color:#d2e3f3;
+}    
+
+/* {
+    background-color:#b4312e;
+} */
+
+/* johnjonz 
+ Border:Blue
+    Glow: neon Green
+    field: Green
+    Text: off white
+*/
+.johnjonz{
+    box-shadow: 0 4px 8px 0 #247922;
+    border: .25em solid #7c0e0e;
+    color:#f3e0d2;
+}    
+
+/* {
+    background-color:#005c04;
+} */
+
+
+
+/* --- Black Lightening-- */
+
+/* jefferson
+ Border:dark blue
+    Glow: neon light blue
+    field: Yellow
+    Text: off white */
+
+.jeffersonpierce{
+    box-shadow: 0 4px 8px 0 #6911fc;
+    border: .25em solid #f2bd02;
+    color:#fec705;
+}    
+
+/* {
+    background-color:#104580;
+} */    
+
+/* tobias
+ Border:dark purple
+    Glow:purple
+    field: blue
+    Text: off white
+*/
+.tobiaswhale{
+    box-shadow: 0 4px 8px 0 #96d6d8;
+    border: .25em solid #1b0629;
+    color:#f3ebd2;
+}    
+
+/* {
+    background-color:#645770;
+} */    

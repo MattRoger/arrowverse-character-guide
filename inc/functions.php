@@ -1,9 +1,30 @@
 <?php
+function get_backside($main_id){
+    include("connection.php");
+    $query='SELECT  aka FROM AKA WHERE ' . $main_id. '=main_id';
+    try{ 
+        $results= $db->query($query);
+       
+     }catch(Exception $e){
+         echo "error";
+         exit;
+     }
+    $catalog_aka = $results->fetchAll();
+    $aka_array= array();
+    foreach($catalog_aka as $item){
+     
+          array_push( $aka_array, $item['aka']);
+    
+    }
+    return $aka_array;
+    // return $catalog_aka;
+}
 
 function full_catalog_array(){
     include("connection.php");
     try{ 
-        $results= $db->query("SELECT * FROM Characters");
+        $results= $db->query("SELECT * FROM Characters
+        ");
        
      }catch(Exception $e){
          echo "error";
@@ -30,6 +51,7 @@ function get_random_array(){
     $catalog = $results->fetchAll();
     return $catalog;
 }
+
 function category_catalog_array($show){
     include("inc/connection.php");
     $show = strtolower($show);
@@ -46,24 +68,47 @@ function category_catalog_array($show){
     return $catalog;
 }
 
-function get_item_html($item){    
+function get_item_html($item){  
+    $aka=get_backside($item['main_id']);
+    var_dump($aka[0]);
+    var_dump($aka[1]);
+
+    $class = strtolower($item["first_name"].$item["last_name"]);
+    $full_name=$item['first_name'] . " " . $item["last_name"] ; 
     $output = '
     <div class="card flip-card">
-    <div class="flip-card-inner"style ="background-image: url(' . "'./images/" .$item['img'] . '")"' .'>
+    <div class="flip-card-inner '. $class.'" style ="background-image: url(' . "'./images/" .$item['img'] . '")"' .'>
       <div class="flip-card-front">
-        <h5>'.$item['main_alias'].'</h5>
-        <h6>'.$item['full_name'].'</h6>
+        <h3 style="background-color:'.$item['bg_color'].'">'.$item['main_alias'].'</h3>
+        <h4 style="background-color:'.$item['bg_color'].'">'. $full_name .'</h4>
       </div>
-      <div class="flip-card-back">
-        <h5>Name:' . $item['full_name'] .'</h5>
-        <h6>Alias:' . $item['main_alias'] .'</h6> 
-        <p>We love that guy</p>
-      </div>
-    </div>
-  </div>
-';
+      <div class="flip-card-back" style="background-color:'.$item['bg_color'].'">
+        <h3>Name:' . $full_name .'</h3>
+        <h4>Alias:' . $item['main_alias'] .'</h4><p>AKA: ';
+        for($i=0; $i< count($aka); $i++){
+            if($i<count($aka)-1){
+                $output .=  $aka[$i] .", ";
+                
+            }else{
+                $output .=  $aka[$i] .".";
 
-    return $output;
+            }
+        }
+        
+      
+        $output .=   '</p>';
+
+    //     foreach($aka as$akaItem){
+            
+    //       echo($akaItem);
+      
+    // }
+   
+    $output .=       
+        "</div>
+        </div>
+    </div>";
+   return $output;
 }
 
 function array_category($catalog, $show){

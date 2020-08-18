@@ -1,5 +1,4 @@
 .card{
-    background-color: aqua;
     height: 490px;
     width: 340px;
     background-size: cover;
@@ -15,12 +14,12 @@
 .flip-card-inner {
   position: relative;
   height: 490px;
-    width: 340px;
-    background-size: cover;
-  text-align: center;
+  width: 340px;
+  background-size: cover;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  
+  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
 
 .flip-card:hover .flip-card-inner {
@@ -39,21 +38,19 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: black;
 }
 
 .flip-card-back {
-  background-color: #2980b9;
-  color: white;
   transform: rotateY(180deg);
-  z-index: 100;
 }
 
 
 
 .wrapper{
+  width: 90%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 nav img{
     width:125px;
