@@ -11,10 +11,16 @@
 //         echo $e->getMessage();
 //         exit;
 // }
+$host="zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$port=3306;
+$socket="";
+$user="fyef9r1pw1e8ayre";
+$password="zab0tjsy498xc15a";
+$dbname="vqksglpi7veihvfq";
 try{
-    $db = new PDO("mysql:host=l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;
-    dbname=arrowverse_db;port=3306",
-    "s5qiw4adv2l8acoo","r7s6mbj2txjrms8b");    
+    $db = new PDO("mysql:host=$host;
+    dbname=$dbname;port=$port",
+    "$user","$password");    
   
 }catch(
     Exception $e){
@@ -22,6 +28,13 @@ try{
         echo $e->getMessage();
         exit;
 }
+
+
+
+$con = new mysqli($host, $user, $password, $dbname, $port, $socket)
+	or die ('Could not connect to the database server' . mysqli_connect_error());
+
+//$con->close();
 
 
 
