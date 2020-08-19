@@ -1,9 +1,20 @@
 <?php
 
+// try{
+//     $db = new PDO("mysql:host=localhost;
+//     dbname=arrowverse_db;port=3306",
+//     "root","matrix");    
+  
+// }catch(
+//     Exception $e){
+//         echo "unable to connect to db";
+//         echo $e->getMessage();
+//         exit;
+// }
 try{
-    $db = new PDO("mysql:host=localhost;
+    $db = new PDO("mysql:host=l6slz5o3eduzatkw.cbetxkdyhwsb.us-east-1.rds.amazonaws.com;
     dbname=arrowverse_db;port=3306",
-    "root","matrix");    
+    "s5qiw4adv2l8acoo","xmqf66ts9hwf8dml");    
   
 }catch(
     Exception $e){
