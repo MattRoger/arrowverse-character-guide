@@ -15,7 +15,7 @@ $host="zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 $port=3306;
 $socket="";
 $user="fyef9r1pw1e8ayre";
-$password="zab0tjsy498xc15a";
+$password="rpiyj48lhzdfvnbc";
 $dbname="vqksglpi7veihvfq";
 try{
     $db = new PDO("mysql:host=$host;
