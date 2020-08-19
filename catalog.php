@@ -17,12 +17,23 @@ if(isset($_GET["cat"])){
     }else if ($_GET["cat"] == "blacklight") {
         $pageTitle = "Black Lightening";
         $section = "blacklight";
+    }else if ($_GET["cat"] == "good") {
+        $pageTitle = "Heros";
+        $section = "alignment";
+        $alignment="good";
+    }else if ($_GET["cat"] == "bad") {
+        $pageTitle = "alignment";
+        $section = "alignment";
+        $alignment="bad";
     }
 }
 
 if (empty($section)) {
     $catalog = full_catalog_array();
-} else {
+}elseif($section == "alignment"){
+    $catalog = alignment_catalog_array($alignment);
+
+}else {
     $catalog = category_catalog_array($section);
 };
 

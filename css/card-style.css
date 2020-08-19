@@ -1,8 +1,65 @@
-.card{
-    height: 490px;
-    width: 340px;
-    background-size: cover;
-    position: relative;
+.flip-card-front h3,
+.flip-card-front h4 {
+  font-family: "Nova Square", cursive;
+  letter-spacing: 0.25rem;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+}
+
+.flip-card-front h3 {
+  font-size: 1.5rem;
+}
+.flip-card-front h4 {
+  text-align: right;
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 0.5rem;
+  padding-right: 1.5rem;
+  border-radius: 0px 0px 40px 0px;
+}
+
+.flip-card-back h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 5% 0rem;
+  padding-top: -1rem;
+}
+.flip-card-back h4 {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+span {
+  font-weight: 600;
+}
+.flip-card-back p {
+  padding-bottom: 0.5rem;
+}
+.flip-card-back li {
+  list-style-type: square;
+  padding: 0.25rem 10%;
+  list-style-position: inside;
+  width: 100%;
+  font-size: .9rem;
+  line-height: .9rem;
+
+}
+.flip-card-back {
+  box-sizing: border-box;
+  padding: 5%;
+  font-family: "Roboto", sans-serif;
+  background-image: url("../images/card_background.png");
+  background-repeat: repeat;
+  font-size: 1rem;
+  text-transform: capitalize;
+  line-height: 1.25rem;
+}
+
+.card {
+  height: 490px;
+  width: 340px;
+  background-size: cover;
+  position: relative;
+  padding: 2rem;
 }
 .flip-card {
   background-color: transparent;
@@ -18,19 +75,19 @@
   background-size: cover;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  
-  /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+  border-width: 0.5rem;
+  border-style: solid;
 }
 
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
-
   backface-visibility: hidden;
 }
 
@@ -43,19 +100,3 @@
 .flip-card-back {
   transform: rotateY(180deg);
 }
-
-
-.wrapper{
-  width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-nav img{
-    width:125px;
-}
-
-nav{
-    display: flex;
-}
-

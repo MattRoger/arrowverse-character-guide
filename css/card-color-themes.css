@@ -8,8 +8,8 @@
     
     */
 .oliverqueen{
-    box-shadow: 0 4px 8px 0 #00bb1a;
-    border: .25em solid #030805;
+    box-shadow: 0px 0px 40px 3px  #00bb1a;
+    border-color: #030805;
     color:#fffcd8;
 }    
 /* {
@@ -19,148 +19,115 @@
 /* diggle */
 
 .johndiggle{
-    box-shadow: 0 4px 8px 0 #a22a60;
-    border: .25em solid #25181f;
+     box-shadow: 0px 0px 40px 3px #a22a60;
+    border-color: #25181f;
     color:#f0f0c9;
+}    
+
+/* sladewilson */
+
+.sladewilson{
+     box-shadow: 0px 0px 40px 3px #da642e;
+    border-color: #190136;
+    color:#da642e;
 }    
 
 /* --- the flash-- */
 /* barry 
-Border:Red
-Glow: Yellow
-field: Red 2
-Text: off white
 */
 .barryallen{
-    box-shadow: 0 4px 8px 0 #fcff1d;
-    border: .25em solid #9a010b;
+     box-shadow: 0px 0px 40px 3px #fcff1d;
+    border-color: #9a010b;
     color:#f0f0c9;
+}   
+/* thawne */
+
+.eobardthawne{
+     box-shadow: 0px 0px 40px 3px #9a010b;
+    border-color:#fcff1d;
+    color:#1d0404;
 }    
 
-/* {
-    background-color:#9a010b;
-} */
 
-
-
-/* cisco 
- Border:Dark purple
-    Glow: blue
-    field:blue
-    Text: off white*/
+/* cisco */
 
 .ciscoramon{
-        box-shadow: 0 4px 8px 0 #00eaff;
-        border: .25em solid #1f0352;
+         box-shadow: 0px 0px 40px 3px #00eaff;
+        border-color: #1f0352;
         color:#f0dbc9;
     }    
     
-    /* {
-        background-color:#41076a;
-    } */
-    
 
 /* --- Legends of Tomorrow-- */
-/* sara 
- Border:Light Purple
-    Glow: neon purple
-    field: light blue
-    Text: black
-*/
+/* sara*/
 .saralance{
-    box-shadow: 0 4px 8px 0 #da48ff;
-    border: .25em solid #390c48;
+     box-shadow: 0px 0px 40px 3px #da48ff;
+    border-color: #390c48;
     color:#1f1e14;
 }    
 
-/* {
-    background-color:#9d3bf8;
-} */
-
-/* mick 
- Border:Red
-    Glow: Orange
-    field:orange/yellow
-    Text: black
-*/
+/* mick */
 
 .mickrory{
-    box-shadow: 0 4px 8px 0 #ff7800;
-    border: .25em solid #e00000;
+     box-shadow: 0px 0px 40px 3px #ff7800;
+    border-color: #e00000;
     color:#1f1e14;
 }    
+/* neron*/
 
-/* {
-    background-color:#9d3bf8;
-} */
+.neron{
+     box-shadow: 0px 0px 40px 3px #eca05c;
+    border-color: #510707;
+    color: #eca05c;
+}    
+
 
 /* --- Supergirl-- */
 
 /* kara 
- Border:Blue
-    Glow: Gold
-    field: Red
-    Text: off white
 */
 
 .karadanvers{
-    box-shadow: 0 4px 8px 0 #ffff47;
-    border: .25em solid #263d53;
+     box-shadow: 0px 0px 40px 3px #ffff47;
+    border-color: #263d53;
     color:#d2e3f3;
 }    
 
-/* {
-    background-color:#b4312e;
-} */
-
-/* johnjonz 
- Border:Blue
-    Glow: neon Green
-    field: Green
-    Text: off white
-*/
+/* johnjonz */
 .johnjonz{
-    box-shadow: 0 4px 8px 0 #247922;
-    border: .25em solid #7c0e0e;
+     box-shadow: 0px 0px 40px 3px #247922;
+    border-color: #7c0e0e;
     color:#f3e0d2;
+}  
+
+/* lex luthor */
+.lexluthor{
+     box-shadow: 0px 0px 40px 3px #05ec2b;
+    border-color: #008216;
+    color:#EFE6DD;
 }    
-
-/* {
-    background-color:#005c04;
-} */
-
 
 
 /* --- Black Lightening-- */
 
-/* jefferson
- Border:dark blue
-    Glow: neon light blue
-    field: Yellow
-    Text: off white */
+/* jefferson */
 
 .jeffersonpierce{
-    box-shadow: 0 4px 8px 0 #6911fc;
-    border: .25em solid #f2bd02;
+     box-shadow: 0px 0px 40px 3px #6911fc;
+    border-color: #f2bd02;
     color:#fec705;
 }    
 
-/* {
-    background-color:#104580;
-} */    
 
-/* tobias
- Border:dark purple
-    Glow:purple
-    field: blue
-    Text: off white
-*/
+/* tobias*/
 .tobiaswhale{
-    box-shadow: 0 4px 8px 0 #96d6d8;
-    border: .25em solid #1b0629;
+     box-shadow: 0px 0px 40px 3px #96d6d8;
+    border-color: #1b0629;
     color:#f3ebd2;
 }    
-
-/* {
-    background-color:#645770;
-} */    
+/* peter gambi*/
+.petergambi{
+     box-shadow: 0px 0px 40px 3px #FFEED6;
+    border-color: #061a40;
+    color:#FFEED6;
+}    

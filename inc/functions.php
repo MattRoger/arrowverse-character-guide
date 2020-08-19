@@ -1,7 +1,8 @@
 <?php
 function get_skills($main_id){
     include("connection.php");
-    $query='SELECT  skills.skill_type, skills.skill_name FROM hero_skills JOIN skills ON hero_skills.skill_id = skills.skill_id WHERE ' . $main_id. '=hero_id';
+    $query='SELECT  skills.skill_type, skills.skill_name FROM hero_skills JOIN skills ON
+     hero_skills.skill_id = skills.skill_id WHERE ' . $main_id. '=hero_id' . " ORDER BY skill_name ASC" ;
     try{ 
         $results= $db->query($query);
        
@@ -32,11 +33,12 @@ function get_aka($main_id){
     return $aka_array;
 }
 
+$query_string = "SELECT * FROM Characters";
+
 function full_catalog_array(){
     include("connection.php");
     try{ 
-        $results= $db->query("SELECT * FROM Characters
-        ");
+        $results= $db->query($query_string);
        
      }catch(Exception $e){
          echo "error";
@@ -53,7 +55,7 @@ function get_random_array(){
          "SELECT * 
          FROM Characters
          ORDER BY RAND()
-         LIMIT 4
+         LIMIT 3
         "
         );
     }catch(Exception $e){
@@ -80,6 +82,24 @@ function category_catalog_array($show){
     return $catalog;
 }
 
+function alignment_catalog_array($alignment){
+    include("inc/connection.php");
+    
+    try{
+        $sql = "SELECT * FROM Characters
+        WHERE alignment = ?";
+        $results = $db->prepare($sql);
+        $results->bindParam(1,$alignment,PDO::PARAM_STR);
+        $results->execute();
+    }catch(Exception $e){
+        echo "show category failed to load";
+    };
+    $catalog = $results->fetchAll();
+    return $catalog;
+}
+
+
+
 function get_item_html($item){  
     $aka=get_aka($item['main_id']);
     $skills=get_skills($item['main_id']);
@@ -100,20 +120,19 @@ function get_item_html($item){
     <div class="card flip-card">
     <div class="flip-card-inner '. $class.'" style ="background-image: url(' . "'./images/" .$item['img'] . '")"' .'>
       <div class="flip-card-front">
-        <h3 style="background-color:'.$item['bg_color'].'">'.$item['main_alias'].'</h3>
-        <h4 style="background-color:'.$item['bg_color'].'">'. $full_name .'</h4>
+        <h3 style="background-color:' . $item['bg_color'] . '">' . $item['main_alias'].'</h3>
+        <h4 style="background-color:' . $item['bg_color'] . '">' . $full_name .'</h4>
       </div>
-      <div class="flip-card-back" style="background-color:'.$item['bg_color'].'">
-        <h3>Name: ' . $full_name .'</h3>
-        <h4>Alias: ' . $item['main_alias'] .'</h4>
-        <p>Species: ' . $item['species'] .'</p>';
+      <div class="flip-card-back" style="background-color:' . $item['bg_color'] . '")">
+        <h3><span>Name: </span>' . $full_name .'</h3>
+        <h4><span>Alias: </span>' . $item['main_alias'] .'</h4>
+        <p><span>Species: </span>' . $item['species'] .'</p>';
         // creates alias list
-        if(count($aka)>1){
-            $output .='<p>AKA: ';
+        if(count($aka)>=1){
+            $output .='<p><span>AKA: </span>';
             for($i=0; $i< count($aka); $i++){
                 if($i<count($aka)-1){
                     $output .=  $aka[$i] .", ";
-                    
                 }else{
                     $output .=  $aka[$i] .".";
                 }
@@ -123,14 +142,14 @@ function get_item_html($item){
         // powers
         
         if(count($powers)>=1){
-            $output.='<p>Powers</p><ul>';
+            $output.='<p><span>Powers</span></p><ul>';
             foreach($powers as $power){
                 $output.="<li>$power</li>";
             }
             $output.='</ul>';
         }
         if(count($abilities)>=1){
-            $output.='<p>Abilities</p><ul>';
+            $output.='<p><span>Abilities</span></p><ul>';
             foreach($abilities as $ability){
                 $output.="<li>$ability</li>";
             }
