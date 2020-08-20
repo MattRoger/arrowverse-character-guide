@@ -6,7 +6,7 @@ A card based character guide to the arrow verse
 
 * [See source code](https://github.com/MattRoger/arrowverse-character-guide)
 
-![guide gif](https://drive.google.com/file/d/1GGLHlM0ztI6VkeAUSeNRHPWrPBQ6M7WB/view?usp=sharing)
+![guide gif](https://github.com/MattRoger/arrowverse-character-guide/blob/master/images/screenshots/arrowversetour.gif?raw=true)
 
 ## Motivation
 I wanted to build a project that can show off the power of php and SQL databases
