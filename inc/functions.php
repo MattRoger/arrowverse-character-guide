@@ -33,12 +33,11 @@ function get_aka($main_id){
     return $aka_array;
 }
 
-$query_string = "SELECT * FROM Characters";
 
 function full_catalog_array(){
     include("connection.php");
     try{ 
-        $results= $db->query($query_string);
+        $results= $db->query("SELECT * FROM Characters");
        
      }catch(Exception $e){
          echo "error";
