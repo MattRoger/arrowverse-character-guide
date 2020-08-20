@@ -10,13 +10,6 @@ CREATE TABLE Characters (
   _show varchar(100) NOT NULL,
   alignment  varchar(50) NOT NULL,
   species  varchar(50) NOT NULL,
-
-  strength INTEGER(10) NOT NULL,
-  attack INTEGER(10) NOT NULL,
-  dexterity INTEGER(10) NOT NULL,
-  intelligence INTEGER(10) NOT NULL,
-  defense INTEGER(10) NOT NULL, 
-  
   img varchar(1000) NOT NULL,
   bg_color VARCHAR(50) NOT NULL
 );
@@ -40,377 +33,6 @@ CREATE TABLE hero_skills(
   hero_id int NOT NULL, 
   skill_id int NOT NULL
 );
-
-
--- flash
--- Barry
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (201, "Barry", "Allen", "The Flash", "flash", "good", "meta-human",
-8, 8, 10, 8, 9,
-'flash/flash.png',
-"#9a010b");
--- Alias
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(2011,201, "Paragon of Love");
-
--- Hero skills
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 1008);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 2001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 2002);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 2003);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 2004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(201, 2005);
-
--- Cisco
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (202, "Cisco", "Ramon", "Vibe", "flash", "good", "meta-human",
-5, 7, 7, 9, 9,
-'flash/vibe.jpg',
-"#41076a");
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(202, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(202, 1010);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(202, 1011);
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(202, 2007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(202, 2008);
-
--- eobard thawne
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (203, "Eobard", "Thawne", "The Reverse-Flash", "flash", "bad", "meta-human",
-8, 8, 10, 8, 9,
-'flash/reverse-flash.jpg',
-"#fcff1d");
-
--- Hero skills
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1008);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1010);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1011);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 1012);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 2001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 2002);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 2003);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 2004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(203, 2005);
-
-
--- Legends
--- Sara
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (301,"Sara", "Lance", "White Canary", "legends", "good", "human",
-7, 7, 9, 7, 8,
-'legends/sara.jpg',
-"#9d3bf8");
-
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(3011,301, "Paragon of Destiny");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1003);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1013);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1014);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(301, 1015);
-
-
--- Mick
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (302,"Mick", "Rory", "Heat Wave", "legends", "good", "human",
-7, 7, 9, 7, 8,
-'legends/mick.jpg',
-"#fdbb3c");
--- aka
-
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(3021, 302, "Chronos");
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(3022, 302, "Rebecca Silver");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(302, 1013);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(302, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(302, 1004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(302, 1014);
-
--- neron
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (303,"Neron", " ", "Demon Lord", "legends", "bad", "demon",
-7, 7, 9, 7, 8,
-'legends/neron.jpg',
-"#00000c");
-
--- skills
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2016);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2015);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2022);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2023);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(303, 2024);
-
--- supergirl
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (401,"Kara", "Danvers", "Supergirl", "supergirl", "good", "kryptonian",
-9, 10, 8, 7, 8,
-"supergirl/supergirl.jpg",
-"#b4312e");
-
--- aka
-
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(4011, 401, "Kara Zor-El");
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(4012,401, "Paragon of Hope");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2002);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2010);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2011);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2012);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2013);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(401, 2014);
-
--- jon jonz
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (402,"John", "Jonz", "Martian Manhunter", "supergirl", "good", "martian",
-8, 10, 8, 7, 8,
-'supergirl/manhunter.jpg',
-"#005c04"
-);
-
--- aka
-
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(4021, 402, "Hank Henshaw");
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(4022,402, "Paragon of Honor");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 1001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 1005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 1014);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2002);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2015);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(402, 2016);
-
--- lex luthor
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (403,"Lex", "Luthor", "Lex Luthor", "supergirl", "bad", "human",
-8, 10, 8, 7, 8,
-'supergirl/lex.jpg',
-"#061a40"
-);
-
--- aka
-INSERT INTO AKA(AKA_id, main_id, aka)
-VALUES(4031, 403, "Paragon of Truth");
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1010);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1011);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(403, 1012);
-
--- black lightening 
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (501,"Jefferson", "Pierce", "Black Lightning", "blacklight", "good", "meta-human",
-7, 9, 7, 7, 8,
-'blacklight/blacklight.jpg',
-"#104580");
-
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 1004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 1005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2002);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(501, 2017);
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (502, "Tobias", "Whale", "The Great White Whale", "blacklight", "bad", "enhanced human",
-8, 9, 7, 8, 6,
-'blacklight/whale.jpg',
-"#645770");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 1001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 1004);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 2005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(502, 2018);
-
--- peter gambi
-
-INSERT INTO Characters (
-main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
-VALUES (503,"Peter", "Gambi", "The Tailor", "blacklight", "good", "human",
-7, 9, 7, 7, 8,
-'blacklight/gambi.jpg',
-"#596869");
-
--- skills
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1001);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1005);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1006);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1007);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1009);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1010);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1011);
-INSERT INTO hero_skills(hero_id,skill_id)
-VALUES(503, 1011);
 
 -- skills table insert
 
@@ -458,6 +80,18 @@ VALUES(1014, "ability", "Master Driver");
 
 INSERT INTO skills(skill_id, skill_type, skill_name)
 VALUES(1015, "ability", "Master Assassin");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1016, "ability", "Master Detective");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1017, "ability", "Master Historian");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1018, "ability", "Master of Deception");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(1019, "ability", "Acrobatics");
 
 INSERT INTO skills(skill_id, skill_type, skill_name)
 VALUES(2001, "power", "Super Speed");
@@ -530,4 +164,77 @@ VALUES(2023, "power", "Rage inducement");
 
 INSERT INTO skills(skill_id, skill_type, skill_name)
 VALUES(2024, "power", "Life-Force absorption");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2025, "power", "Superhuman sonic scream");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2026, "power", "Thermokinetic cryokinesis");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2027, "power", "Cryokinetic breath");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2028, "power", "Cryokinetic healing");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2029, "power", "Elasticity");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2030, "power", "Shapeshifting");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2031, "power", "Psionic blasts");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2032, "power", "Psychic illusion");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2033, "power", "Exosuit: Size alteration");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2034, "power", "Exosuit: Energy blast");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2035, "power", "Exosuit: Flight");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2036, "power", "Organic steel transformation");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2037, "power", "Stomp-induced shockwaves");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2038, "power", "Cybernetic interface");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2039, "power", "Technopathy");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2040, "power", "Oneiromancy");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2040, "power", "Precognition");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2041, "power", "Dream-walking");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2042, "power", "Energy Blast");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2043, "power", "Energy Blast");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2044, "power", "Thunder Clap");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2045, "power", "Electrical absorption");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2046, "power", "Electrical constructs");
+
+INSERT INTO skills(skill_id, skill_type, skill_name)
+VALUES(2047, "power", "Command inducement");
+
 

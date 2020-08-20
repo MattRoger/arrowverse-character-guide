@@ -1,5 +1,7 @@
 <?php
 
+// for local db
+
 // try{
 //     $db = new PDO("mysql:host=localhost;
 //     dbname=arrowverse_db;port=3306",
@@ -11,6 +13,9 @@
 //         echo $e->getMessage();
 //         exit;
 // }
+
+// for jawsdb
+
 $host="zy4wtsaw3sjejnud.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
 $port=3306;
 $socket="";
@@ -33,7 +38,6 @@ try{
 
 
 
-//$con->close();
 
 
 

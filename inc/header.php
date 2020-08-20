@@ -16,7 +16,7 @@
         <div class ="nav-img"><a href="catalog.php?cat=flash"><img src="images/buttons/flash.png">The Flash</a></div>
         <div class ="nav-img"><a href="catalog.php?cat=legends"><img src="images/buttons/legends.png">D.C. Legends of Tomorrow</a></div>
         <div class ="nav-img"><a href="catalog.php?cat=supergirl"><img src="images/buttons/supergirl.png">Supergirl</a></div>
-        <div class ="nav-img"><a href="catalog.php?cat=blacklight"><img src="images/buttons/blacklight.png">Black Lightening</a></div>
-        
+        <div class ="nav-img"><a href="catalog.php?cat=blacklight"><img src="images/buttons/blacklight.png">Black Lightning</a></div>        
+        <div class ="nav-img"><a href="index.php"><img src="images/buttons/DC.png">Random</a></div>        
     </nav>
 </header>

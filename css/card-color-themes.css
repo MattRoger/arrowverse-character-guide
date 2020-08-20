@@ -21,6 +21,20 @@
     border-color: #0d1e0c;
     color:#f4ddd0;
 }    
+/* dinah*/
+
+.dinahdrake{
+     box-shadow: 0px 0px 40px 3px #6c9675;
+    border-color: #14181c;
+    color:#e8edf4;
+}    
+/* rene Ramirez*/
+
+.reneramirez{
+     box-shadow: 0px 0px 40px 3px #a01b3c;
+    border-color: #162d57;
+    color:#e9ca2e;
+}    
 
 /* sladewilson */
 
@@ -55,6 +69,28 @@
         color:#f0dbc9;
     }    
     
+/* caitlin */
+
+.caitlinsnow{
+         box-shadow: 0px 0px 40px 3px #10ebff;
+        border-color: #328eff;
+        color:#071724;
+    }    
+    
+    
+/* ralph */
+.ralphdibny{
+         box-shadow: 0px 0px 40px 3px #d8db10;
+        border-color: #6c0728;
+        color:#071724;
+    }    
+/* ralph */
+.grodd{
+         box-shadow: 0px 0px 40px 3px #CBA34F;
+        border-color: #232120;
+        color:#071724;
+    }    
+    
 
 /* --- Legends of Tomorrow-- */
 /* sara*/
@@ -71,6 +107,28 @@
     border-color: #e00000;
     color:#1f1e14;
 }    
+/*ray */
+
+.raypalmer{
+     box-shadow: 0px 0px 40px 3px #ec4441;
+    border-color: #8a1715;
+    color:#F1E8B8;
+}    
+/*nate */
+
+.nateheywood{
+     box-shadow: 0px 0px 40px 3px #ec4441;
+    border-color: #475e86;
+    color:#bed8e4;
+}    
+/*charlie */
+
+.clotho{
+     box-shadow: 0px 0px 40px 3px #37ff8b;
+    border-color: #F23FE7;
+    color:#25291C;
+}    
+
 /* neron*/
 
 .neron{
@@ -105,6 +163,24 @@
     color:#EFE6DD;
 }    
 
+/* alex danvers */
+.alexdanvers{
+     box-shadow: 0px 0px 40px 3px #521088;
+    border-color: #2749a7;
+    color:#50c2c2;
+}    
+/* alex danvers */
+.querldox{
+     box-shadow: 0px 0px 40px 3px #0514ec;
+    border-color: #62C4FC;
+    color:#EAEFD3;
+}    
+.nianal{
+     box-shadow: 0px 0px 40px 3px #05ece0;
+    border-color: #32052e;
+    color:#e8cbec;
+}    
+
 
 /* --- Black Lightening-- */
 
@@ -128,4 +204,22 @@
      box-shadow: 0px 0px 40px 3px #FFEED6;
     border-color: #061a40;
     color:#FFEED6;
+}    
+/* thunder*/
+.anissapierce{
+     box-shadow: 0px 0px 40px 3px #a914c7;
+    border-color: #f2bd02;
+    color:#dcc2ec;
+}    
+/* jen*/
+.jenniferpierce{
+     box-shadow: 0px 0px 40px 3px #e6810e;
+    border-color: #f2bd02;
+    color:#f6f6fc;
+}    
+/* gravedigger*/
+.tysonsykes{
+     box-shadow: 0px 0px 40px 3px #ff1717;
+    border-color: #702e24;
+    color:#c2c2c2;
 }    

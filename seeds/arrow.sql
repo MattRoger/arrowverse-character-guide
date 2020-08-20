@@ -3,9 +3,8 @@
 
 INSERT INTO Characters (
 main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
+img, bg_color)
 VALUES ( 101, "Oliver", "Queen",  "The Green Arrow", "arrow", "good", "human",
-7, 9, 8, 9, 7,
 'arrow/green_arrow.jpg',
 "#124222"
 );
@@ -33,14 +32,15 @@ INSERT INTO hero_skills(hero_id,skill_id)
 VALUES(101, 1006);
 INSERT INTO hero_skills(hero_id,skill_id)
 VALUES(101, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(101, 1019);
 
 -- Diggle
 
 INSERT INTO Characters (
 main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
+img, bg_color)
 VALUES ( 102, "John", "Diggle",  "Spartan", "arrow", "good", "human",
-7, 8, 6, 7, 7,
 'arrow/spartan.jpg',
 "#470f27");
 
@@ -64,9 +64,8 @@ VALUES(102, 1009);
 
 INSERT INTO Characters (
 main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
+ img, bg_color)
 VALUES ( 103, "Felicity", "Smoke",  "Overwatch", "arrow", "good", "human",
-7, 9, 8, 9, 7,
 'arrow/felicity.jpg',
 "#1d8d4d"
 );
@@ -84,9 +83,8 @@ VALUES(103, 1012);
 
 INSERT INTO Characters (
 main_id, first_name, last_name, main_alias, _show, alignment,species, 
-strength, attack, dexterity, intelligence, defense, img, bg_color)
+ img, bg_color)
 VALUES ( 104, "Slade", "Wilson",  "Deathstroke", "arrow", "bad", "Enhanced Human",
-7, 9, 8, 9, 7,
 'arrow/deathstroke.jpg',
 "#190136"
 );
@@ -113,5 +111,48 @@ INSERT INTO hero_skills(hero_id,skill_id)
 VALUES(104, 2020);
 INSERT INTO hero_skills(hero_id,skill_id)
 VALUES(104, 2021);
+
+
+-- dinah drake
+
+INSERT INTO Characters (
+main_id, first_name, last_name, main_alias, _show, alignment,species, 
+img, bg_color)
+VALUES ( 105, "Dinah", "Drake",  "Black Canary", "arrow", "good", "Meta-human",
+'arrow/dinahdrake.jpg',
+"#2b2a2b"
+);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1005);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1006);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1007);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1016);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(105, 1019);
+
+-- wild dog
+
+INSERT INTO Characters (
+main_id, first_name, last_name, main_alias, _show, alignment,species, 
+img, bg_color)
+VALUES ( 106, "Rene", "Ramirez",  "Wild Dog", "arrow", "good", "Meta-human",
+'arrow/wilddog.jpg',
+"#10192b"
+);
+
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(106, 1001);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(106, 1004);
+INSERT INTO hero_skills(hero_id,skill_id)
+VALUES(106, 1006);
 
 

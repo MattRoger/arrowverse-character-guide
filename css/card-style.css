@@ -41,7 +41,7 @@ span {
   width: 100%;
   font-size: .9rem;
   line-height: .9rem;
-
+  
 }
 .flip-card-back {
   box-sizing: border-box;
@@ -59,12 +59,10 @@ span {
   width: 340px;
   background-size: cover;
   position: relative;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 .flip-card {
   background-color: transparent;
-  width: 320px;
-  height: 510px;
   perspective: 1000px;
 }
 
@@ -77,6 +75,7 @@ span {
   transform-style: preserve-3d;
   border-width: 0.5rem;
   border-style: solid;
+  border-radius: 3%;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -99,4 +98,11 @@ span {
 
 .flip-card-back {
   transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 800px){
+  .card {
+    margin: auto;
+  }
+
 }
